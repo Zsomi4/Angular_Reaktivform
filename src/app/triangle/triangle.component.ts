@@ -9,6 +9,7 @@ import { FormControl } from '@angular/forms';
 export class TriangleComponent {
    base = new FormControl();
    height = new FormControl();
+   area = new FormControl();
 
    constructor() { }
 
@@ -20,7 +21,8 @@ export class TriangleComponent {
     let base = Number(this.base.value);
     let height = Number(this.height.value);
     let area = this.calcArea(base, height);
-    console.log(this.base.value);
+    // console.log(this.base.value);
+    this.area.setValue(String(area));
    }
 
    calcArea(base: number, height: number) {

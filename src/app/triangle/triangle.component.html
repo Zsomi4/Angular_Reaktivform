@@ -1,10 +1,15 @@
 
 <div class="mt-3">
-    <input type="text" [formControl]="base" placeholder="Alap">
+    <input type="text" [formControl]="base" placeholder="Alap" class="form-control">
 </div>
 
 <div class="mt-3">
-    <input type="text" [formControl]="height" placeholder="Magasság">
+    <input type="text" [formControl]="height" placeholder="Magasság" class="form-control">
 </div>
-
-<button (click)="onClickCalcButton()">Számit</button>
+<br>
+<button (click)="onClickCalcButton()" class="btn btn-success">Számit</button>
+<br>
+<div class="mt-3">
+    <input type="text" [formControl]="area"
+    readonly class="form-control">
+</div>
